@@ -35,8 +35,8 @@ public class PatientController {
         patient.setDiseaseType(json.getString("diseaseType"));
         patient.setGender(json.getString("gender"));
 
-        Timestamp currTime=new Timestamp(System.currentTimeMillis());
-        patient.setAdmitDate(currTime);
+        Timestamp curr_Time=new Timestamp(System.currentTimeMillis());
+        patient.setAdmitDate(curr_Time);
 
         String doctorId = json.getString("doctorId");
         Doctor doctor = doctorRepository.findById(Integer.valueOf(doctorId)).get();
